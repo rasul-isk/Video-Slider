@@ -6,17 +6,20 @@ body,
 .app {
   display: grid;
   justify-items: center;
-  align-content: center;
+  align-content: space-between;
   overflow: hidden;
   height: 100%;
   width: 100%;
   font-family: 'Press Start 2P', 'cursive';
+  background: #323232;
   /* font-family: 'Source Sans Pro', sans-serif; */
 }
 
-.additional-content {
-  height: 100%;
-  width: 100%;
+.slider {
+  display: block;
+  outline-color: #ffb41f;
+  /* height: 100%;
+  width: 100%; */
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -39,3 +42,16 @@ body,
   color: #ffb41f !important;
 }
 
+video,
+image {
+  object-fit: contain;
+}
+
+.preview {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.highlight {
+  border: 2px solid rgb(200, 50, 12);
+}

@@ -1,26 +1,19 @@
-import { CssBaseline } from "@mui/material";
+import { Box, CssBaseline } from '@mui/material';
+import { VideoSlider } from './components/VideoSlider';
+import { VideoPlayer } from './components/VideoPlayer';
+import { useState } from 'react';
 
 function App() {
+  const sources = ["1-expectation","2-vision","3-study-experience","4-web-experience","5-web-journey","6-passion-reasons","7-AI-tools","8-snake-game"];
+  const [content, setContent] = useState('1-expectation');
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-    <div className="App">
-      <CssBaseline/>
-    </div>
+    <Box>
+      <CssBaseline />
+      <Box sx={{ display: 'grid', justifyItems: 'center', alignContent: 'space-between', overflow: 'hidden', height: '100vh', width: '100vw' }}>
+        <VideoSlider sources={sources} content={content} setContent={setContent} />
+        <VideoPlayer src={content} />
+      </Box>
+    </Box>
   );
 }
 
