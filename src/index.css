@@ -2,8 +2,7 @@
 
 html,
 body,
-#root,
-.app {
+#root {
   display: grid;
   justify-items: center;
   align-content: space-between;
@@ -12,36 +11,6 @@ body,
   width: 100%;
   background: #323232;
   font-family: 'Source Sans Pro', sans-serif;
-}
-
-.slider {
-  display: block;
-  outline-color: #ffb41f;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-.header {
-  border-radius: 35% !important;
-  padding: 60px !important;
-  display: flex !important;
-}
-.container-item {
-  align-items: center;
-  display: block;
-  padding: 50px;
-  width: 40%;
-  height: fit-content;
-  margin: 10px;
-  border-radius: 25%;
-}
-
-.main-button {
-  color: #ffb41f !important;
-}
-
-video,
-image {
-  object-fit: contain;
 }
 
 .preview {
@@ -68,6 +37,8 @@ image {
 }
 
 .arrow {
+  color: #00bf9c;
+  cursor: pointer;
   z-index: 3;
   width: 0.9em !important;
   height: 0.9em !important;
@@ -86,4 +57,33 @@ image {
 
 .scroll-right {
   transform: translateX(-400px);
+}
+
+.carousel {
+  display: inline-flex;
+  width: 90%;
+  height: 100%;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-player {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.slider {
+  padding: 0px 80px;
+  display: block;
+  height: 20vh;
+  width: 100vw;
+  border-bottom: 2px solid rgb(111, 29, 166);
 }
