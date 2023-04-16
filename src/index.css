@@ -10,16 +10,13 @@ body,
   overflow: hidden;
   height: 100%;
   width: 100%;
-  font-family: 'Press Start 2P', 'cursive';
   background: #323232;
-  /* font-family: 'Source Sans Pro', sans-serif; */
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .slider {
   display: block;
   outline-color: #ffb41f;
-  /* height: 100%;
-  width: 100%; */
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -48,10 +45,45 @@ image {
 }
 
 .preview {
+  z-index: 1;
   margin-right: 15px;
   margin-left: 15px;
+  min-height: 60%;
+  animation: 2s ease-in-out;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 .highlight {
   border: 2px solid rgb(200, 50, 12);
+  min-height: 90%;
+  animation: 2s ease-in-out;
+  transition: 0.5s;
+}
+
+.preview-small:hover {
+  min-height: 70%;
+  animation: 2s ease-in-out;
+  transition: 0.5s;
+}
+
+.arrow {
+  z-index: 3;
+  width: 0.9em !important;
+  height: 0.9em !important;
+}
+
+.arrow:hover {
+  width: 1em !important;
+  height: 1em !important;
+  transition: 0.5s;
+  animation: 2s ease-in-out;
+}
+
+.DefaultPlayer {
+  height: 10%;
+}
+
+.scroll-right {
+  transform: translateX(-400px);
 }
